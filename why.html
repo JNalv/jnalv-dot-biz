@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<!--
+
+HTML/CSS training provided by codecademy.com.
+Made with Bootstrap & Glyphicons
+Special thanks to @blinsay for helping a dude out with this.
+
+-->
+
+<html>
+<head>
+	
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<link type="text/css" rel="stylesheet" href="bootstrap.min.css"/>
+	
+	<title>
+	JOSH NALVEN'S BEGRUDGING EXCUSE FOR A WEB PRESENCE
+	</title>
+	
+	<link rel="icon" type="image/png"
+     href="trash.png" />
+	
+	<script type="text/javascript">
+		var images = ["child.png","dog.png","goofy.png","gorilla.png","hoodie.png","jesus.png","props.png","roof.png","hefner.png","blurry.png","1995.png","typewriter.png","moustache.png","laugh.png","pantomiming.png"]
+		
+		function shuffle(images) {
+			var m = images.length, t, i;
+			
+			// While there remain elements to shuffle…
+			while (m) {
+			
+			// Pick a remaining element…
+			i = Math.floor(Math.random() * m--);
+			
+			// And swap it with the current element.
+			t = images[m];
+			images[m] = images[i];
+			images[i] = t;
+			}
+
+			return images;
+}
+		
+		function loadImages() {
+			document.getElementById("leftImage").src=images[0];
+			document.getElementById("rightImage").src=images[1];
+		}
+	</script>
+	
+</head>
+
+<body onload="shuffle(images);loadImages();">
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="header">
+			<a href="index.html"><img id="banner" class="img-responsive" style="border: 1px dashed black" src="brick.png"/></a>
+			</div>
+		</div>
+		
+		<div id="pages" class="row nav">
+			<ul>
+				<li><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></li>
+				<li><a class="boring" href="index.html">WHO</a></li>
+				<li><a class="boring" href="what.html">WHAT</a></li>
+				<li><a class="boring" href="why.html">WHY</a></li>
+				<li><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span></li>
+			</ul>
+		</div>
+	
+		<div class="row">
+				<div class="col-sm-4">
+					<img id="leftImage" class="img-responsive" style="border: 1px dashed black" src="hoodie.png"/>
+				</div>
+			
+				<div class="col-sm-4" id="center">
+					
+					<p>If you hit puberty at eight and a half years old, you'd be a weird guy too.</p>
+					
+					<div id="social" class="row nav">
+						<ul>
+							<li><a href="https://www.facebook.com/joshnalven"><img class="glyphs" src="facebook.png"/></a></li>
+							<li><a href="https://twitter.com/JNalv"><img class="glyphs" src="twitter.png"/></a></li>
+							<li><a href="mailto:joshnalven@gmail.com"><img class="glyphs" src="email.png"/></a></li>
+						</ul>
+					</div>
+				
+				</div>
+				
+				<div class="col-sm-4">
+				<img id="rightImage" class="img-responsive" style="border: 1px dashed black" src="roof.png"/>
+				</div>
+		</div>
+		
+		<div id="footer" class="row">
+			<p>Copyright Josh Nalven &#169;2014
+			<br>
+			Please monetize my creative capital</p>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!--
+
+HTML/CSS training provided by codecademy.com.
+Made with Bootstrap & Glyphicons
+Special thanks to @blinsay for helping a dude out with this.
+
+-->
+
+<html>
+
+<head>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-58891398-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+
+    <title>
+        JOSH NALVEN'S BEGRUDGING EXCUSE FOR A WEB PRESENCE
+    </title>
+
+    <link rel="icon" type="image/png" href="trash.png" />
+
+    <script type="text/javascript">
+        var images = ["child.png", "dog.png", "goofy.png", "gorilla.png", "hoodie.png", "jesus.png", "props.png", "roof.png", "hefner.png", "blurry.png", "1995.png", "typewriter.png", "moustache.png", "laugh.png", "pantomiming.png"]
+
+        function shuffle(images) {
+            var m = images.length,
+                t, i;
+
+            // While there remain elements to shuffle…
+            while (m) {
+
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+
+                // And swap it with the current element.
+                t = images[m];
+                images[m] = images[i];
+                images[i] = t;
+            }
+
+            return images;
+        }
+
+        function loadImages() {
+            document.getElementById("leftImage").src = images[0];
+            document.getElementById("rightImage").src = images[1];
+        }
+    </script>
+
+</head>
+
+<body onload="shuffle(images);loadImages();">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="header">
+                <a href="index.html"><img id="banner" class="img-responsive" style="border: 1px dashed black" src="brick.png" />
+                </a>
+            </div>
+        </div>
+
+        <div id="pages" class="row nav">
+            <ul>
+                <li><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                </li>
+                <li><a class="boring" href="index.html">WHO</a>
+                </li>
+                <li><a class="boring" href="what.html">WHAT</a>
+                </li>
+                <li><a class="boring" href="why.html">WHY</a>
+                </li>
+                <li><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <img id="leftImage" class="img-responsive" style="border: 1px dashed black" src="hoodie.png" />
+            </div>
+
+            <div class="col-sm-4" id="center">
+                <p>Josh Nalven is a writer, director, improvisor, and comedian living in Chicago.</p>
+                <p>Josh Nalven is a product manager of sorts for a satirical design & development firm called <a class="links" href="http://thegroupthinkgroup.com/">The GroupThink Group</a>. Our first project was called <a class="links" href="http://jakedate.com/">JakeDate</a> &mdash; it disrupted the Jacob vertical for good.</p>
+                <p>Josh Nalven is the co-creator, co-host, and webmaster of the <strong><a class="links" href="http://guyfriendspodcast.com/">Guy Friends Podcast</a></strong>, a dating/relationship/sex advice podcast catering to non-cishetdudes. We do pretty well for a podcast.</p>
+                <p>Josh Nalven used to write, perform, and direct with a sketch ensemble known as <strong>The Business</strong>. He now directs other groups here and there. He improvises on <strong>Missing Her Kissinger</strong>, a <a class="links" href="http://onegroupmind.com/Pages/Home.aspx">One Group Mind</a> team.</p>
+                <p>Josh Nalven trained at <strong>iO Chicago</strong>, <strong>The Annoyance Theatre</strong> & graduated <strong>Second City's Conservatory</strong> program. He went to the University of Chicago, and didn't study programming, statistics, or economics, which in hindsight was probably a mistake.</p>
+                <p>Josh Nalven just taught himself HTML, CSS, and a little JavaScript &#8212; this is his first website, <strong>so be nice</strong>.</p>
+                <p>Josh Nalven is represented by <strong>a uvula-rattling scream ricocheting through an empty locker room</strong>.</p>
+
+                <div id="social" class="row nav">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/joshnalven"><img class="glyphs" src="facebook.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/JNalv"><img class="glyphs" src="twitter.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:joshnalven@gmail.com"><img class="glyphs" src="email.png" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+                <img id="rightImage" class="img-responsive" style="border: 1px dashed black" src="roof.png" />
+            </div>
+        </div>
+
+        <div id="footer" class="row">
+            <p>Copyright Josh Nalven &#169;2014
+                <br> Please monetize my creative capital</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
